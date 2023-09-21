@@ -1,0 +1,36 @@
+body {
+  background: linear-gradient(25deg, skyblue, bisque);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  margin: auto;
+}
+
+h1 {
+  color: saddlebrown;
+  text-align: center;
+}
+
+#navbar {
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.55);
+    border-radius: 2rem;
+    padding: .5rem;
+    margin: 3rem 2rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  #navbar li {
+    color: #f6ebe0;
+    display: inline-block;
+    transition: .15s;
+    font-size: x-large;
+    font-weight: 600;
+    padding: .25rem;
+  }
+  
+  #navbar li:hover {
+    scale: 115%;
+  }
