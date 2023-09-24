@@ -5,7 +5,6 @@ import Contacts from "./components/contact";
 import Home from "./components/home";
 import About from "./components/about";
 import Footer from "./components/footer";
-import Thank from "./components/thank";
 
 function App() {
   return (
@@ -30,7 +29,6 @@ function App() {
               <Route path="/home" element={<Home />} />
               <Route path="/about" element={<About />} />
               <Route path="/contact" element={<Contacts />} />
-              <Route path="/thank" component={<Thank />} />
             </Routes>
           </main>
         </Router>

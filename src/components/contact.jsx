@@ -1,7 +1,6 @@
 import "./contact.css";
 import React, { useState } from "react";
 import { createClient } from "@supabase/supabase-js";
-import { Link } from "react-router-dom";
 
 const supabaseUrl = "https://upneoblnvjitlbqvwbwn.supabase.co";
 const supabaseKey =
@@ -19,7 +18,7 @@ function Contacts() {
 
   const handleChange = (event) => {
     const { name, value } = event.target;
-    console.log("name , value", name, value);
+    console.log("name , value", name, value)
     setFormData((prevData) => ({
       ...prevData,
       [name]: value,
@@ -30,9 +29,7 @@ function Contacts() {
     event.preventDefault();
 
     try {
-      const { data, error } = await supabase
-        .from("Contacts")
-        .insert([formData]);
+      const { data, error } = await supabase.from("Contacts").insert([formData]);
       if (error) {
         console.error(error);
       } else {
@@ -55,16 +52,6 @@ function Contacts() {
         <h1>Contact Me</h1>
         <form method="post" action="/api/contacts" onSubmit={handleSubmit}>
           <div>
-            {/* <span className="required-field"></span>
-            <label htmlFor="id">id</label>
-            <input
-              type="num"
-              id="id"
-              name="id"
-              onChange={handleChange}
-              required
-            /> */}
-
             <span className="required-field"></span>
             <label htmlFor="first_name">First Name</label>
             <input
@@ -110,32 +97,10 @@ function Contacts() {
               name="email"
               onChange={handleChange}
               required
-              autoComplete="email"
+              autoComplete="email" 
             />
-{/* 
-            <span className="required-field"></span>
-            <label htmlFor="createdAt">createdAt</label>
-            <input
-              type="string"
-              id="createdAt"
-              name="createdAt"
-              onChange={handleChange}
-              required
-            />
-
-            <span className="required-field"></span>
-            <label htmlFor="updatedAt">updatedAt</label>
-            <input
-              type="string"
-              id="updatedAt"
-              name="updatedAt"
-              onChange={handleChange}
-              required
-            /> */}
           </div>
-          <Link to="/thank">
-            <input type="Submit" onClick={(event) => handleSubmit(event)} />
-          </Link>
+          <input id="Submit" type="Submit" />
         </form>
       </main>
     </div>

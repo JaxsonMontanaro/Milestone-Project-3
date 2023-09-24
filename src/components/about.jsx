@@ -5,7 +5,7 @@ export default function about() {
     <div>
       <h1>About Me</h1>
       <h3 className="info">
-        Welcome to my junior web developer portfolio project page! I'm
+        Hello, my name is Jaxson Montanaro. Welcome to my junior web developer portfolio project page! I'm
         passionate about creating engaging and user-friendly websites that not
         only look great but also deliver exceptional user experiences. From
         responsive designs to interactive web applications, I've been exploring
